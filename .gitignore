@@ -1,0 +1,16 @@
+﻿# Wrangler
+.wrangler/
+*.log
+
+# Serena
+.serena/
+**/.serena/
+
+# Node
+node_modules/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+
