@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>아우라비즈 데모</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@11.2.6/swiper-bundle.min.css"/>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/8ec44d91c8.js" crossorigin="anonymous"></script>
+
+  <!-- ECharts -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- Pretendard 대신 시스템 고딕 폰트 사용 -->
+  <style>
+    body {
+      font-family: "맑은 고딕", "Malgun Gothic", sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 사이드바 -->
+<div class="sidebar pr-regular text-09">
+  <ul class="nav flex-column">
+    <li class="nav-item mb-4 d-lg-none d-block text-center">
+      <button class="btn close-btn p-0"><i class="fa-solid fa-xmark"></i></button>
+    </li>
+    <li class="nav-item text-center mb-3 d-none d-lg-block">
+      <a href="/" class="nav-link">
+        <img src="https://via.placeholder.com/100x40?text=AURABIZ" alt="로고" style="height: 40px;">
+      </a>
+    </li>
+    <li class="nav-item pb-2">
+      <div class="nav-link pb-1"><span class="pr-bold">홍길동님</span></div>
+      <div class="nav-link pt-0">
+        <div class="text-center">
+          <div class="text-08 text-dark mb-2">지금 회원가입시 <span class="pr-medium text-danger">1만원 쿠폰팩</span> 증정</div>
+          <a href="#" class="btn btn-sm w-100 py-2" style="background-color: #FEE500; color: #000000; font-weight: 600;">
+            <i class="fa-solid fa-comment me-1"></i> 카카오 3초 회원가입
+          </a>
+        </div>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fa-solid fa-house me-2"></i> 메인 바로가기</a>
+    </li>
+    <li class="nav-item dropdown border-top pt-2">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+        <img src="https://via.placeholder.com/15?text=P" class="icon me-2" alt=""> 순위 체크
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">플레이스 순위</a>
+        <a class="dropdown-item" href="#">쇼핑 순위</a>
+        <a class="dropdown-item" href="#">쿠팡 순위</a>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<!-- 메인 콘텐츠 -->
+<div class="container-fluid" id="contentSection">
+  <div class="row mb-4">
+    <div class="col-12 px-0">
+      <div class="swiper banner-swiper d-xxl-none">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://via.placeholder.com/300x80?text=배너1" alt=""></div>
+          <div class="swiper-slide"><img src="https://via.placeholder.com/300x80?text=배너2" alt=""></div>
+          <div class="swiper-slide"><img src="https://via.placeholder.com/300x80?text=배너3" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6 mb-3">
+      <div class="console-box rounded-3 h-100 p-3">
+        <h5 class="mb-3">플레이스 추적 슬롯</h5>
+        <div id="traceHistoryChart" style="width:100%; height:250px;"></div>
+      </div>
+    </div>
+    <div class="col-lg-6 mb-3">
+      <div class="console-box rounded-3 h-100 p-3">
+        <h5 class="mb-3">쇼핑 트래픽 캠페인</h5>
+        <div class="campaign-slider-wrapper">
+          <div class="campaign-slider" id="npSlider">
+            <div class="campaign-card">
+              <div class="pr-bold">아우라 스테이크</div>
+              <div class="text-muted">맛있는 스테이크</div>
+              <div class="mt-2"><span class="badge bg-success">완료</span></div>
+            </div>
+            <div class="campaign-card">
+              <div class="pr-bold">아우라 라면</div>
+              <div class="text-muted">쫄깃한 라면</div>
+              <div class="mt-2"><span class="badge bg-success">완료</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+  <div class="container">
+    <small>© 2025 AURAbiz. All rights reserved.</small>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/swiper@11.2.6/swiper-bundle.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
